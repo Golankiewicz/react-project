@@ -1,0 +1,103 @@
+.sectionoverall {
+	width: 80%;
+	height: 60vh;
+	color: #444;
+	font-size: 18px;
+	font-weight: 600;
+	position: fixed;
+	left: 15%;
+	top: 20%;
+	border-radius: 10px;
+	display: flex;
+}
+.section-left {
+	width: 30%;
+	height: 100%;
+	overflow: hidden;
+	font-size: 14px;
+}
+.section-left-top {
+	height: 40%;
+	border-radius: 10px;
+	background-image: url(./resources/Elektryczni.JPG);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.section-left-top1 {
+	height: 40%;
+	border-radius: 10px;
+	background-image: url(./resources/Teatr.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.section-right {
+	height: 100%;
+	width: 70%;
+	margin-left: 15px;
+}
+.section-right h1 {
+	margin-bottom: 0;
+}
+.section-right p {
+	margin-top: 0;
+}
+
+.sub {
+	width: 200px;
+	height: 50px;
+	display: block;
+	color: cadetblue;
+	border: 3px solid cadetblue;
+	padding: 10px 35px;
+	background-color: white;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 25px;
+	outline: none;
+	animation: shaking 10s linear infinite;
+}
+
+@keyframes shaking {
+	10% {
+		transform: translateX(0);
+	}
+	90% {
+		transform: translateX(0);
+	}
+	91% {
+		transform: translateX(10px);
+	}
+	92% {
+		transform: translateX(-10px);
+	}
+	93% {
+		transform: translateX(10px);
+	}
+	94% {
+		transform: translateX(-10px);
+	}
+	95% {
+		transform: translateX(10px);
+	}
+	96% {
+		transform: translateX(-10px);
+	}
+	97% {
+		transform: translateX(10px);
+	}
+	98% {
+		transform: translateX(-10px);
+	}
+	99% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.react-player {
+	margin-top: 25px;
+	width: 250px;
+	height: 150px;
+}

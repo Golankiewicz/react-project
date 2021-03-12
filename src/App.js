@@ -1,28 +1,71 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import NewDiv from './NewDiv';
+import NewDiv1 from './NewDiv1';
+import NewSection from './NewSection';
+import NewSection1 from './NewSection1';
+
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+	state = {
+		active: false,
+
+		active1: false,
+	};
+
+	handleClick = () => {
+		this.setState({
+			active: !this.state.active,
+		});
+	};
+	handleClick1 = () => {
+		this.setState({
+			active1: !this.state.active1,
+		});
+	};
+
+	handleClickClose = () => {
+		console.log('kliknięty');
+		this.setState({
+			active: false,
+			active1: false,
+		});
+	};
+
+	render() {
+		if (this.state.active) {
+			return (
+				<>
+					<button onClick={this.handleClickClose}>close</button>
+					<NewDiv handleClick={this.handleClick} />
+					<NewDiv1 handleClick1={this.handleClick1} />
+
+					<NewSection />
+				</>
+			);
+		}
+
+		if (this.state.active1) {
+			return (
+				<>
+					<button onClick={this.handleClickClose}>close</button>
+					<NewDiv handleClick={this.handleClick} />
+
+					<NewDiv1 handleClick1={this.handleClick1} />
+
+					<NewSection1 />
+				</>
+			);
+		}
+		return (
+			<>
+				<button onClick={this.handleClickClose}>close</button>
+				<NewDiv handleClick={this.handleClick} />
+
+				<NewDiv1 handleClick1={this.handleClick1} />
+			</>
+		);
+	}
 }
 
 export default App;
